@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyTube</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- study tube -->
+    <h2>StudyTube</h2>
+    <p>YouTube Study Mode</p>
+
+    <button id="toggleBtn">Turn Study Mode ON</button>
+    <p id="status">Study Mode is OFF</p>
+
+    <hr>
+
+    <!-- topic selection -->
+    <h3>Select Study Topic</h3>
+
+    <select id="topicSelect">
+        <option value="DSA">DSA - Data Structures & Algorithms</option>
+        <option value="OS">OS - Operating Systems</option>
+        <option value="DBMS">DBMS - Database Management Systems</option>
+        <option value="CN">CN - Computer Networks</option>
+    </select>
+
+    <p id="topicMessage"></p>
+
+    <hr>
+
+    <h3 id="topicKeywordHeading">DSA Keywords</h3>
+
+    <p id="topicKeywordCount">Total keywords: 0</p>
+
+    <input
+        id="topicKeywordInput"
+        type="text"
+        placeholder="Enter a topic keyword"
+    >
+
+    <button id="addTopicKeywordBtn">Add Topic Keyword</button>
+
+    <p id="topicKeywordMessage"></p>
+
+    <ul id="topicKeywordList"></ul>
+
+    <hr>
+
+    <hr>
+
+
+    <!-- trusted channels  -->
+    <h3>Trusted Channels</h3>
+
+    <p>Allow all videos from selected channels.</p>
+
+    <input
+        id="trustedChannelInput"
+        type="text"
+        placeholder="Paste channel URL or channel ID"
+    >
+
+    <button id="addTrustedChannelBtn">
+        Trust Channel
+    </button>
+
+    <p id="trustedChannelMessage"></p>
+
+    <ul id="trustedChannelList"></ul>
+
+    <hr>
+
+    <h3>Trusted Videos</h3>
+
+    <p>Allow individual videos from selected channels.</p>
+
+    <input
+        id="trustedVideoInput"
+        type="text"
+        placeholder="Paste video URL or video ID"
+    >
+
+    <button id="addTrustedVideoBtn">
+        Trust Video
+    </button>
+
+    <p id="trustedVideoMessage"></p>
+
+    <ul id="trustedVideoList"></ul>
+
+    <hr>
+
+
+    <!-- glbal distraction -->
+    <h3>Custom Distracting Keywords</h3>
+    <p id="keywordCount">Total keywords: 0</p>
+
+    <input id="keywordInput" type="text" placeholder="e.g. cricket, vlogs">
+
+    <button id="addKeywordBtn">Add Keyword</button>
+
+    <button id="clearKeywordsBtn">Clear All Keywords</button>
+    <button id="resetKeywordsBtn">Reset to Default Keywords</button>
+    <p id="resetMessage"></p>
+
+    <p id="clearMessage"></p>
+    <p id="keywordMessage"></p>
+    <button id="toggleKeywordsBtn">Hide Keywords ▲</button>
+    <ul id="keywordList"></ul>
+
+    <!-- clearing alert box -->
+    <div id="modal_background" class="modal_bg hidden">
+        <div id="confirmModal" class="modal hidden">
+            <div class="modal-box">
+                <h3>🔴 Clear all keywords?</h3>
+                <p>
+                    Are you sure you want to remove all distracting keywords? This will empty your keyword list.
+                </p>
+
+                <div class="modal-actions">
+                    <button id="cancelClearBtn" class="cancel-btn">Cancel</button>
+                    <button id="confirmClearBtn" class="confirm-btn">clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- reset alert box -->
+    <div id="modal_reset_background" class="modal_bg hidden">
+        <div id="confirmResetModal" class="modal hidden">
+            <div class="modal-box">
+                <h3>🔴 Reset all keywords to default?</h3>
+                <p>
+                    Are you sure you want to reset all distracting keywords to default? This will replace your current keyword list with the default distracting keywords.
+                </p>
+
+                <div class="modal-actions">
+                    <button id="cancelResetBtn" class="cancel-btn">Cancel</button>
+                    <button id="confirmResetBtn" class="confirm-btn">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

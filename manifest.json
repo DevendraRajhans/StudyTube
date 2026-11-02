@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "StudyTube — YouTube Study Mode",
+  "version": "1.0.0",
+  "description": "Filter distractions and focus on educational YouTube videos.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+      "https://www.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

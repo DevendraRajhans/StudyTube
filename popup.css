@@ -1,0 +1,284 @@
+body{
+    width: 320px;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+h2{
+    margin: 0 0 6px;
+    color: #2563eb;
+}
+
+p{
+    font-size: 13px;
+}
+
+button{
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px;
+    margin: 6px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li{
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+li button {
+  margin-left: 8px;
+  background: #dc2626;
+}
+
+li button:hover {
+  background: #b91c1c;
+}
+
+#keywordList{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#keywordList li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px;
+    margin: 6px 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+#keywordList li button {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.modal_bg {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.635);
+}
+
+.modal {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-box h3{
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.modal-box p{
+    color: #475569;
+    line-height: 1.5;
+}
+
+.modal-actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.modal-actions button {
+  margin: 0;
+}
+
+.cancel-btn {
+  background: #2a2a2a;
+  color: #fdfeff;
+}
+
+.cancel-btn:hover {
+  background: #696969;
+}
+
+.confirm-btn {
+  background: #dc2626;
+}
+
+.confirm-btn:hover {
+  background: #b91c1c;
+}
+
+#toggleKeywordsBtn{
+    background: black;
+}
+#toggleKeywordsBtn:hover{
+    background: rgb(67, 66, 66);
+}
+
+#clearKeywordsBtn{
+    background: red;
+}
+#clearKeywordsBtn:hover{
+    background: rgb(190, 3, 3);
+}
+
+#resetKeywordsBtn{
+    background: rgb(18, 179, 15);
+}
+#resetKeywordsBtn:hover{
+    background: rgb(12, 124, 10);
+}
+
+#topicSelect {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px;
+    margin: 6px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+    color: #1e293b;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#topicSelect:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+#topicMessage {
+    font-size: 12px;
+    color: #16a34a;
+}
+
+
+#trustedChannelList,
+#trustedVideoList {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#trustedChannelList li,
+#trustedVideoList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px;
+    margin: 6px 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+#trustedChannelList li button,
+#trustedVideoList li button {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+#trustedChannelMessage,
+#trustedVideoMessage {
+    font-size: 12px;
+    color: #16a34a;
+}
+
+#trustedVideoList li img {
+    width: 80px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+#trustedVideoList li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+
+#trustedChannelList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#trustedChannelList li img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.trusted-channel-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 4px;
+}
+
+.trusted-channel-details strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.trusted-channel-details small {
+    font-size: 10px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+#trustedChannelList li button {
+    flex-shrink: 0;
+}
